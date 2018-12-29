@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  p Please select .png type files & files < 3mb only
+
+  form(method="POST" enctype="multipart/form-data" action="monupload")
+    input(type="file", name="monupload", multiple)
+    button(type="submit") Upload now!!
